@@ -1,6 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
-import contactImg from "../assets/contact_image01.png";
+import contactImg from "../assets/Banner.jpg";
 
 const Contact = () => {
   return (
