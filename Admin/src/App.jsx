@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
-import { TrainerContext } from "./Context/TrainerContext";
+import { TrainerContext } from "./context/TrainerContext";
 import { AdminContext } from "./context/AdminContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

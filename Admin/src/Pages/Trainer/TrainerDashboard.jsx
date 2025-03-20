@@ -1,7 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 import React, { useContext, useEffect, useState } from "react";
-import { TrainerContext } from "../../Context/TrainerContext";
+import { TrainerContext } from "../../context/TrainerContext";
 
 import { RiFileList3Line } from "react-icons/ri";
 import Earnings_icon from "../../assets/Earnings_icon.png";

@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-import { AdminContext } from "../context/AdminContext";
-import { TrainerContext } from "../Context/TrainerContext.jsx";
+import { AdminContext } from "../context/AdminContext.jsx";
+import { TrainerContext } from "../context/TrainerContext.jsx";
 
 const Login = () => {
   const navigate = useNavigate();

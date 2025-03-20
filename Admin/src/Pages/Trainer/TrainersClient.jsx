@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { TrainerContext } from "../../Context/TrainerContext";
+import { TrainerContext } from "../../context/TrainerContext";
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
