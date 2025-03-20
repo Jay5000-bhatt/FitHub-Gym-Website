@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { AdminContext } from "../../context/AdminContext";
+import { AdminContext } from "../../context/adminContext";
 
 const AllWorkers = () => {
   const { aToken, Trainers, setTrainers, getTrainersData } =

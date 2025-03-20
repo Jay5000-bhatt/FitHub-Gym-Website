@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { AdminContext } from "../context/AdminContext.jsx";
+import { AdminContext } from "../context/adminContext.jsx";
 
 import { FcHome } from "react-icons/fc";
 import { CgProfile } from "react-icons/cg";
@@ -11,7 +11,7 @@ import { TiGroupOutline } from "react-icons/ti";
 import { MdOutlineGroupAdd } from "react-icons/md";
 import { FaRegListAlt } from "react-icons/fa";
 import { PiOrange, PiUserListBold } from "react-icons/pi";
-import { TrainerContext } from "../context/TrainerContext.jsx";
+import { TrainerContext } from "../context/trainerContext.jsx";
 import { TbColorFilter } from "react-icons/tb";
 import { LuBadgeDollarSign } from "react-icons/lu";
 

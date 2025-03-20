@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { AdminContext } from "../../context/AdminContext";
+import { AdminContext } from "../../context/adminContext";
 import { FaRegEdit } from "react-icons/fa";
 import { MdOutlineDeleteOutline } from "react-icons/md";
 import axios from "axios";

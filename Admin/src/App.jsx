@@ -1,24 +1,24 @@
 import React, { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
-import { TrainerContext } from "./context/TrainerContext";
-import { AdminContext } from "./context/AdminContext";
+import { TrainerContext } from "./context/trainerContext.jsx";
+import { AdminContext } from "./context/adminContext.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import TrainerProfile from "./pages/trainer/TrainerProfile.jsx";
-import TrainersClient from "./pages/trainer/TrainersClient.jsx";
-import TrainerDashboard from "./pages/trainer/TrainerDashboard.jsx";
-import Dashboard from "./pages/admin/Dashboard.jsx";
-import AllWorkers from "./pages/admin/AllWorkers.jsx";
-import AllCustomers from "./pages/admin/AllCustomers.jsx";
-import AddWorkers from "./pages/admin/AddWorkers.jsx";
-import AddProduct from "./pages/admin/AddProduct.jsx";
-import AllProduct from "./pages/admin/AllProduct.jsx";
+import TrainerProfile from "./pages/trainer/trainerProfile.jsx";
+import TrainersClient from "./pages/trainer/trainersClient.jsx";
+import TrainerDashboard from "./pages/trainer/trainerDashboard.jsx";
+import Dashboard from "./pages/admin/dashboard.jsx";
+import AllWorkers from "./pages/admin/allWorkers.jsx";
+import AllCustomers from "./pages/admin/allCustomers.jsx";
+import AddWorkers from "./pages/admin/addWorkers.jsx";
+import AddProduct from "./pages/admin/addProduct.jsx";
+import AllProduct from "./pages/admin/allProduct.jsx";
 import Login from "./pages/Login.jsx";
 import NavBar from "./components/Navbar.jsx";
 import Sidebar from "./components/Sidebar.jsx";
-import AllRequests from "./pages/admin/AllRequests.jsx";
-import Allorders from "./pages/admin/Allorders.jsx";
+import AllRequests from "./pages/admin/allRequests.jsx";
+import Allorders from "./pages/admin/allOrders.jsx";
 
 const App = () => {
   const { aToken } = useContext(AdminContext);

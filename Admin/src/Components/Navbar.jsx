@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { AdminContext } from "../context/AdminContext.jsx";
+import { AdminContext } from "../context/adminContext.jsx";
 import { assets } from "../assets/assets.js";
 import { useNavigate } from "react-router-dom";
-import { TrainerContext } from "../context/TrainerContext.jsx";
+import { TrainerContext } from "../context/trainerContext.jsx";
 
 const NavBar = () => {
   const { aToken, setAToken } = useContext(AdminContext);

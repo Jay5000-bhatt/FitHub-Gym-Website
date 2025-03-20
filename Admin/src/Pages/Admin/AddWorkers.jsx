@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Select from "react-select";
 import { assets } from "../../assets/assets";
 import { useContext } from "react";
-import { AdminContext } from "../../context/AdminContext";
+import { AdminContext } from "../../context/adminContext";
 import { toast } from "react-toastify";
 import axios from "axios";
 

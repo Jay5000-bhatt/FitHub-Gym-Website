@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { AdminContext } from "../../context/AdminContext";
+import { AdminContext } from "../../context/adminContext";
 import { toast } from "react-toastify";
 import axios from "axios";
 import Earnings_icon from "../../assets/Earnings_icon.png";

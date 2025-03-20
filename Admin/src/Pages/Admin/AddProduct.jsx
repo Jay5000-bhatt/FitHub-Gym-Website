@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 import { assets } from "../../assets/assets";
 import { useContext } from "react";
-import { AdminContext } from "../../context/AdminContext";
+import { AdminContext } from "../../context/adminContext";
 
 const AddProduct = () => {
   const [ProductImg, setProductImg] = useState("");
