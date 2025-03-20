@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets.js";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { AppContext } from "../Context/AppContext.jsx";
+import { AppContext } from "../context/AppContext.jsx";
 
 const Register = () => {
   const [UserImg, setUserImg] = useState("");

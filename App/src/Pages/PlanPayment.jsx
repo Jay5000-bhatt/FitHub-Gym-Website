@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { AppContext } from "../Context/AppContext";
+import { AppContext } from "../context/AppContext";
 import paymentImg from "../assets/QR_Code.jpg";
 import { MdArrowRightAlt } from "react-icons/md";
 

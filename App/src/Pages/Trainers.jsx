@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { AppContext } from "../Context/AppContext";
+import { AppContext } from "../context/AppContext";
 
 const Trainers = () => {
   const { backendUrl } = useContext(AppContext);

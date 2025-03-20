@@ -5,20 +5,20 @@ import { AdminContext } from "./context/AdminContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import TrainerProfile from "./Pages/Trainer/TrainerProfile";
-import TrainersClient from "./Pages/Trainer/TrainersClient";
-import TrainerDashboard from "./Pages/Trainer/TrainerDashboard";
-import Dashboard from "./Pages/Admin/Dashboard";
-import AllWorkers from "./Pages/Admin/AllWorkers";
-import AllCustomers from "./Pages/Admin/AllCustomers";
-import AddWorkers from "./Pages/Admin/AddWorkers";
-import AddProduct from "./Pages/Admin/AddProduct";
-import AllProduct from "./Pages/Admin/AllProduct";
-import Login from "./Pages/Login";
-import NavBar from "./Components/Navbar";
-import Sidebar from "./Components/Sidebar";
-import AllRequests from "./Pages/Admin/AllRequests";
-import Allorders from "./Pages/Admin/Allorders";
+import TrainerProfile from "./pages/trainer/TrainerProfile";
+import TrainersClient from "./pages/trainer/TrainersClient";
+import TrainerDashboard from "./pages/trainer/TrainerDashboard";
+import Dashboard from "./pages/admin/Dashboard";
+import AllWorkers from "./pages/admin/AllWorkers";
+import AllCustomers from "./pages/admin/AllCustomers";
+import AddWorkers from "./pages/admin/AddWorkers";
+import AddProduct from "./pages/admin/AddProduct";
+import AllProduct from "./pages/admin/AllProduct";
+import Login from "./pages/Login";
+import NavBar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import AllRequests from "./pages/admin/AllRequests";
+import Allorders from "./pages/admin/Allorders";
 
 const App = () => {
   const { aToken } = useContext(AdminContext);

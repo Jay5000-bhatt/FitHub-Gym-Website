@@ -6,7 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 
 import { assets } from "../assets/assets.js";
 import NavLogo from "../assets/Nav_Logo.svg";
-import { AppContext } from "../Context/AppContext.jsx";
+import { AppContext } from "../context/AppContext.jsx";
 import { BsCart4 } from "react-icons/bs";
 
 const Navbar = () => {

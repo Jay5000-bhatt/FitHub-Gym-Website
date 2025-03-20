@@ -4,22 +4,22 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import "./App.css";
-import Register from "./Pages/Register";
-import Login from "./Pages/Login";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 
-import Home from "./Pages/Home";
+import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import Trainers from "./Pages/Trainers";
+import Trainers from "./pages/Trainers";
 
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
-import Profile from "./Pages/Profile";
-import Navbar from "./Components/Navbar";
-import ProductList from "./Pages/ProductList";
-import Plans from "./Pages/Plans";
-import Cart from "./Pages/Cart";
-import PaymentPortal from "./Pages/PaymentPortal";
-import PlanPayment from "./Pages/PlanPayment";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Profile from "./pages/Profile";
+import Navbar from "./components/Navbar";
+import ProductList from "./pages/ProductList";
+import Plans from "./pages/Plans";
+import Cart from "./pages/Cart";
+import PaymentPortal from "./pages/PaymentPortal";
+import PlanPayment from "./pages/PlanPayment";
 
 const App = () => (
   <div className="mx-4 sm:mx-[5.5%]">

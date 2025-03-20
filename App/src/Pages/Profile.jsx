@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { assets } from "../assets/assets.js";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { AppContext } from "../Context/AppContext.jsx";
+import { AppContext } from "../context/AppContext.jsx";
 
 const Profile = () => {
   const [isEdit, setIsEdit] = useState(false);
