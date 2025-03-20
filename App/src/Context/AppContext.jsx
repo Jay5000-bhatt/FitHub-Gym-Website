@@ -7,9 +7,7 @@ export const AppContext = createContext();
 const AppContextProvider = (props) => {
   const [userData, setUserData] = useState(false);
 
-  const [Token, setToken] = useState(
-    localStorage.getItem("Token") ? localStorage.getItem("Token") : ""
-  );
+  const [Token, setToken] = useState( localStorage.getItem("Token") ? localStorage.getItem("Token") : "" );
   const currencySymbol = "₹";
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
