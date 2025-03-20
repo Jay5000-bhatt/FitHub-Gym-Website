@@ -1,61 +1,38 @@
 import React, { useContext, useEffect, useState } from "react";
-import { AdminContext } from "../../context/adminContext";
+import { AdminContext } from "../../context/AdminContext";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-const Allorders = () => {
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+};
+
+const AllCustomers = () => {
   const { aToken, backendUrl } = useContext(AdminContext);
-  const [OrderData, setOrderData] = useState([]);
-  const [UserData, setUserData] = useState([]);
-  const [mergedOrderData, setMergedOrderData] = useState([]);
+  const [customersData, setCustomersData] = useState([]);
 
-  const getOrderData = async () => {
-    try {
-      const { data } = await axios.get(`${backendUrl}/api/admin/getOrderData`, {
-        headers: { aToken: aToken },
-      });
-      if (data.success) {
-        setOrderData(data.data);
-      } else {
-        toast.error(data.message);
-      }
-    } catch (error) {
-      toast.error("Failed to get Order Data");
-    }
-  };
-
-  const getUserData = async () => {
+  const getCustomersData = async () => {
     try {
       const { data } = await axios.get(`${backendUrl}/api/admin/customers`, {
         headers: { aToken: aToken },
       });
       if (data.success) {
-        setUserData(data.data);
+        setCustomersData(data.data);
       } else {
         toast.error(data.message);
       }
     } catch (error) {
-      toast.error("Failed to get User Data");
+      console.error("Error fetching customer data", error);
+      toast.error("Failed to fetch customer data.");
     }
   };
 
   useEffect(() => {
-    if (OrderData.length > 0 && UserData.length > 0) {
-      const mergedData = OrderData.map((order) => {
-        const user = UserData.find((u) => u._id === order.userId);
-        return {
-          ...order,
-          userName: user ? user.name : "Unknown User",
-        };
-      });
-      setMergedOrderData(mergedData); // Avoid updating state during render
+    if (aToken) {
+      getCustomersData();
     }
-  }, [OrderData, UserData]);
-
-  useEffect(() => {
-    getOrderData();
-    getUserData();
-  }, []);
+  }, [aToken]);
 
   return (
     <div className="w-full max-w-6xl m-5 sm:m-8 overflow-visible">
@@ -67,38 +44,46 @@ const Allorders = () => {
                 #
               </th>
               <th scope="col" className="px-6 py-3">
-                Product Name
+                Customer Name
               </th>
               <th scope="col" className="px-6 py-3">
-                Brand Name
+                Plan
               </th>
               <th scope="col" className="px-6 py-3">
-                User
+                Date of Payment
               </th>
               <th scope="col" className="px-6 py-3">
-                Price
+                Date of Expiry
               </th>
             </tr>
           </thead>
           <tbody>
-            {mergedOrderData.length > 0 ? (
-              mergedOrderData.map((data, index) => (
+            {customersData.length > 0 ? (
+              customersData.map((data, index) => (
                 <tr className="bg-fuchsia-100 border-b" key={index}>
                   <td className="px-6 py-4">{index + 1}</td>
                   <td className="px-4 sm:px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    {data.productName}
+                    {data.name}
                   </td>
                   <td className="px-4 sm:px-6 py-2 sm:py-4">
-                    {data.brandName}
+                    {data.plan || "N/A"}
                   </td>
-                  <td className="px-4 sm:px-6 py-2 sm:py-4">{data.userName}</td>
-                  <td className="px-4 sm:px-6 py-4">{data.amount}</td>
+                  <td className="px-4 sm:px-6 py-2 sm:py-4">
+                    {data.dateOfPayment
+                      ? formatDate(data.dateOfPayment)
+                      : "N/A"}
+                  </td>
+                  <td className="px-4 sm:px-6 py-4">
+                    {data.dateOfPlanExpiry
+                      ? formatDate(data.dateOfPlanExpiry)
+                      : "N/A"}
+                  </td>
                 </tr>
               ))
             ) : (
               <tr>
                 <td colSpan="6" className="px-6 py-4 text-center">
-                  No orders available
+                  No customers available
                 </td>
               </tr>
             )}
@@ -109,4 +94,4 @@ const Allorders = () => {
   );
 };
 
-export default Allorders;
+export default AllCustomers;

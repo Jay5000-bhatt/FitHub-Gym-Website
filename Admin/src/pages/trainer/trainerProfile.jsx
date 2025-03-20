@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
-import { TrainerContext } from "../../context/trainerContext";
+import { TrainerContext } from "../../context/TrainerContext";
 
 const TrainerProfile = () => {
   const {

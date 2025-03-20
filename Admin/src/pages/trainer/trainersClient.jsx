@@ -1,22 +1,25 @@
 import React, { useContext, useEffect, useState } from "react";
-import { AdminContext } from "../../context/adminContext";
-import { toast } from "react-toastify";
 import axios from "axios";
+import { toast } from "react-toastify";
+import { TrainerContext } from "../../context/TrainerContext";
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
   return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 };
 
-const AllCustomers = () => {
-  const { aToken, backendUrl } = useContext(AdminContext);
+const TrainersClient = () => {
+  const { TrainerToken, backendUrl } = useContext(TrainerContext);
   const [customersData, setCustomersData] = useState([]);
 
   const getCustomersData = async () => {
     try {
-      const { data } = await axios.get(`${backendUrl}/api/admin/customers`, {
-        headers: { aToken: aToken },
-      });
+      const { data } = await axios.get(
+        `${backendUrl}/api/trainer/customers-data`,
+        {
+          headers: { TrainerToken: TrainerToken },
+        }
+      );
       if (data.success) {
         setCustomersData(data.data);
       } else {
@@ -29,10 +32,10 @@ const AllCustomers = () => {
   };
 
   useEffect(() => {
-    if (aToken) {
+    if (TrainerToken) {
       getCustomersData();
     }
-  }, [aToken]);
+  }, [TrainerToken]);
 
   return (
     <div className="w-full max-w-6xl m-5 sm:m-8 overflow-visible">
@@ -94,4 +97,4 @@ const AllCustomers = () => {
   );
 };
 
-export default AllCustomers;
+export default TrainersClient;
