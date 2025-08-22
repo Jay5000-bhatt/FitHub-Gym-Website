@@ -1,17 +1,17 @@
 import express from "express";
 import {
-  ToggleCart,
-  ToggleWatchList,
-  fetchAllTrainers,
-  getCartProducts,
-  getProductData,
-  getUserData,
-  getOrders,
-  loginUser,
-  placeOrder,
-  registerUser,
-  requestUpgradePlan,
-  updateUserData,
+	ToggleCart,
+	ToggleWatchList,
+	fetchAllTrainers,
+	getCartProducts,
+	getProductData,
+	getUserData,
+	getOrders,
+	loginUser,
+	placeOrder,
+	registerUser,
+	requestUpgradePlan,
+	updateUserData,
 } from "../Controllers/UserController.js";
 import upload from "../Middleware/Multer.js";
 import { authUser } from "../Middleware/AuthUser.js";

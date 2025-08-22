@@ -1,12 +1,12 @@
 import express from "express";
 
 import {
-  TrainerLogin,
-  TrainerProfile,
-  UpdateProfile,
-  adminDashboard,
-  getAllCustomers,
-  getAllOrders,
+	TrainerLogin,
+	TrainerProfile,
+	UpdateProfile,
+	adminDashboard,
+	getAllCustomers,
+	getAllOrders,
 } from "../Controllers/TrainerController.js";
 import { AuthTrainer } from "../Middleware/AuthTrainer.js";
 

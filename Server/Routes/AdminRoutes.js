@@ -1,18 +1,18 @@
 import express from "express";
 import {
-  addProduct,
-  addTrainer,
-  adminDashboard,
-  adminLogin,
-  declineReq,
-  deleteproduct,
-  getAllCustomers,
-  getAllOrders,
-  getAllProducts,
-  getAllTrainers,
-  getReqCustomers,
-  updatePaymentStatus,
-  updateProduct,
+	addProduct,
+	addTrainer,
+	adminDashboard,
+	adminLogin,
+	declineReq,
+	deleteproduct,
+	getAllCustomers,
+	getAllOrders,
+	getAllProducts,
+	getAllTrainers,
+	getReqCustomers,
+	updatePaymentStatus,
+	updateProduct,
 } from "../Controllers/AdminController.js";
 import { authAdmin } from "../Middleware/AuthAdmin.js";
 import upload from "../Middleware/Multer.js";

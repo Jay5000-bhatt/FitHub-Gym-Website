@@ -22,7 +22,7 @@ ConnectDB();
 connectCloudinary();
 
 app.get("/", (req, res) => {
-  res.send("Welcome to the API!");
+	res.send("Welcome to the API!");
 });
 
 app.use("/api/user", UserRouter);
@@ -30,5 +30,5 @@ app.use("/api/admin", AdminRouter);
 app.use("/api/trainer", TrainerRouter);
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+	console.log(`Server is running on port ${PORT}.`);
 });
